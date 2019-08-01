@@ -1,8 +1,8 @@
 from model.__init__ import news_predict_NER
-from  datetime import datetime
+from datetime import datetime
 import json
 import pandas as pd
-from __init__ import insert_raw_data
+from __init__ import client, insert_raw_data
 
 if __name__ == "__main__":
 
