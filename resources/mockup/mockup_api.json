@@ -1,0 +1,37 @@
+{
+	"sources":"hoon_smart",
+	"date": 20181203,
+	"company":"PTT",
+	"type":"fund",
+	"news":"news make it hot PTT get 200 k rewards",
+	"paragrpah":[{
+		"para": "news make it hot PTT get 200 k rewards",
+		"para": "news make it hot PTT get 200 k rewards" 
+	}]
+	"tokenized":["news", "make", "it", "hot", "PTT", "invest", "200", "k", "rewards"],
+	"cln_tokenized":["news", "make", "it", "hot", "PTT", "invest", "<number>", "<quantity>", "rewards"],
+	"name_entity_recognition": [
+				{"news":""}, 
+				{"make":""}, 
+				{"it":""}, 
+				{"hot":""}, 
+				{"PTT":""}, 
+				{"invest":""}, 
+				{"<number>":""}, 
+				{"<quantity>":""}, 
+				{"rewards":""}
+				],
+	"path_of_speech": [
+				{"news":""}, 
+				{"make":""}, 
+				{"it":""}, 
+				{"hot":""}, 
+				{"PTT":""},
+				{"invest":""}, 
+				{"<number>":""}, 
+				{"<quantity>":""}, 
+				{"rewards":""}
+				],
+	"EDU": ["news make it hot","PTT invest <number> <quantity> rewards"],
+			"information_extraction": ["PTT invest <number> <quantity> rewards"]
+}

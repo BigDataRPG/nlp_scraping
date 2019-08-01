@@ -1,4 +1,4 @@
-from __init__ import client, insert_data
+from __init__ import client, insert_news_data
 from scraping import news_daily
 
 import pandas as pd
@@ -33,6 +33,6 @@ if __name__ == "__main__":
 
     # Insert records to ES
     for i, data in enumerate(json_form):
-        insert_data(client, data)
+        insert_news_data(client, data)
         if i % 100 == 0:
             print("Successfully insert data to ES {}".format(i))

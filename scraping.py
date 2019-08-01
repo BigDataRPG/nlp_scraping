@@ -54,7 +54,7 @@ class Hoonsmart:
         return pageUrls,newsUrls
     def hoon_get_news_url(self,url):
         html = request_content(url)
-        soup  = BeautifulSoup(html, "html.parser")
+        soup  = BeautifulSoup(html, "html5lib")
         data = []
         for tag in soup.find_all("h2", class_=('entry-title')):
             try:
@@ -65,7 +65,7 @@ class Hoonsmart:
         return data
     def load_content(self,news_url):
         html = request_content(news_url)
-        soup = BeautifulSoup(html, "html.parser")
+        soup = BeautifulSoup(html, "html5lib")
         title = soup.find("h2", class_=('main-title')).get_text()
         contents = []
         entry = soup.find("article")
@@ -114,7 +114,7 @@ class Bangkokbiz:
 
     def get_news_url(self, url):
         html = request_content(url)
-        soup = BeautifulSoup(html, "html.parser")
+        soup = BeautifulSoup(html, "html5lib")
         data = []
         for tag in soup.find_all("h3", class_=('post_title')):
             try:
@@ -126,7 +126,7 @@ class Bangkokbiz:
 
     def load_content(self, news_url):
         html = request_content(news_url)
-        soup = BeautifulSoup(html, "html.parser")
+        soup = BeautifulSoup(html, "html5lib")
 
         text = []
 
@@ -176,7 +176,7 @@ class SETNews:
 
     def __get_page(self):
         pages = []
-        soup = BeautifulSoup(self.__content, "html.parser")
+        soup = BeautifulSoup(self.__content, "html5lib")
         pages.append(self.__url)
         for tag in soup.find_all("nav",class_="pagination-set text-center"):
             i = 1
@@ -201,7 +201,7 @@ class SETNews:
         news_url = []
         for url in urls:
             html = request_content(url)
-            soup = BeautifulSoup(html, "html.parser")
+            soup = BeautifulSoup(html, "html5lib")
             for tag in soup.find_all("tbody"):
                 for row in tag.find_all("td"):
                     if (row.a and row.a.get_text()=='รายละเอียด'):
@@ -216,7 +216,7 @@ class SETNews:
                 'content':None}
 
         html = request_content(url)
-        soup = BeautifulSoup(html, "html.parser")
+        soup = BeautifulSoup(html, "html5lib")
         for div in soup.find_all("div",class_="row col-md-offset-3 col-md-7"):
             for row in div.find_all("div",class_='row'):
                 rows = row.find_all('div')
@@ -264,7 +264,7 @@ class RYT9:
 
     def get_news_url(self, url):
         html = request_content(url)
-        soup = BeautifulSoup(html, "html.parser")
+        soup = BeautifulSoup(html, "html5lib")
         data = []
         for tag in soup.find_all("h3"):
             try:
@@ -279,7 +279,7 @@ class RYT9:
         info = {}
 
         html = request_content(url)
-        soup = BeautifulSoup(html, "html.parser")
+        soup = BeautifulSoup(html, "html5lib")
 
         info['title'] = soup.find("div", id="main-story").h2.get_text()
 
@@ -315,4 +315,3 @@ def news_daily():
 
     news_all = pd.concat([ryt9.contents, hoon_df, bknew_df, set_news.contents], axis=0, ignore_index=True)
     return news_all.to_json(orient='index')
-# bknew = Bangkokbiz(1, 2)
