@@ -1,0 +1,47 @@
+{
+  "dailynews":[
+      "agriculture",
+      "bangkok",
+      "crime",
+      "economic",
+      "education",
+      "entertainment",
+      "foreign",
+      "it",
+      "politics",
+      "regional",
+      "sports"
+  ],
+  "matichon": [
+      "economy",
+      "entertainment",
+      "foreign",
+      "lifestyle",
+      "local",
+      "politics",
+      "region",
+      "sport",
+      "sport"
+  ],
+  "khaosod": [
+      "around-thailand",
+      "around-the-world-news",
+      "economics",
+      "entertainment",
+      "politics",
+      "sports",
+      "education"
+  ],
+  "bangkokbiz": [
+      "business",
+      "economic",
+      "finance",
+      "foreign"
+  ],
+    "hoonsmart": [
+      "wealth-management",
+      "breaking-news",
+      "fund",
+      "exclusive-news"
+  ]
+}
