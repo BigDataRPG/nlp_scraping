@@ -3,8 +3,8 @@ import os
 import pandas as pd
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-from keras import backend as K
-K.tensorflow_backend._get_available_gpus()
+# from keras import backend as K
+# K.tensorflow_backend._get_available_gpus()
 
 from keras.models import load_model
 from keras.preprocessing.sequence import pad_sequences
