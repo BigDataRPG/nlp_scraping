@@ -40,7 +40,7 @@ soupsieve==1.9.2
 tensorboard==1.14.0
 tensorflow==1.14.0
 tensorflow-estimator==1.14.0
-tensorflow-gpu==1.1.0
+tensorflow-gpu==2.9.3
 termcolor==1.1.0
 urllib3==1.25.3
 webencodings==0.5.1
